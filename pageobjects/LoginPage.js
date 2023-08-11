@@ -1,24 +1,35 @@
+const {test, expect} = require('@playwright/test');
+
 class LoginPage {
 
     constructor(page)
     {
         this.page = page;
-        this.userEmail = page.locator("#userEmail");
-        this.userPassword = page.locator("#userPassword");
-        this.signInBtn = page.locator("[value='Login']");
+        this.userEmail = page.locator("#email");
+        this.userPassword = page.locator("#password");
+        this.signInBtn = page.locator(".btn");
+        this.signOutBtn = page.locator("text=Sair");
     }
 
-    async goToPage()
-    {
-        await this.page.goto('https://rahulshettyacademy.com/client');
-    }
+    // async goToPage()
+    // {
+    //     await this.page.goto('https://rahulshettyacademy.com/client');
+    // }
 
-    async validLogin(useremail, password)
+    async Login(useremail, password, alertmessage)
     {
         await this.userEmail.fill(useremail);
         await this.userPassword.fill(password);
         await this.signInBtn.click();
         await this.page.waitForLoadState("networkidle");
+
+        await expect(this.page.locator(".alert")).toBeVisible();
+        await expect(this.page.locator(".alert")).toHaveText(alertmessage);
+    }
+
+    async Logout()
+    {
+        await this.signOutBtn.click();
     }
 }
 module.exports = {LoginPage};

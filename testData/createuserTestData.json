@@ -1,0 +1,73 @@
+[
+    {
+        "testName" : "correct data",
+        "username" : "Zumira de Oliveira",
+        "useremail" : "zzzuser002@test.com",
+        "userpassword" : "Test-1234",
+        "userpasswordconfirm" : "Test-1234",
+        "alertmessage" : "Conta criada com sucesso!"
+    },
+
+    {
+        "testName" : "duplicated email",
+        "username" : "Zumira de Oliveira",
+        "useremail" : "zzzuser002@test.com",
+        "userpassword" : "Test-1234",
+        "userpasswordconfirm" : "Test-1234",
+        "alertmessage" : "Esse email já está registrado"
+    },
+    
+    {
+        "testName" : "not matching passwords",
+        "username" : "Zumira de Oliveira",
+        "useremail" : "z11111111@test.com",
+        "userpassword" : "Test-1234",
+        "userpasswordconfirm" : "Test-1235",
+        "alertmessage" : "As senhas inseridas não são iguais"
+    },
+
+    {
+        "testName" : "wrong email format",
+        "username" : "Zumira de Oliveira",
+        "useremail" : "z11111111test.com",
+        "userpassword" : "Test-1234",
+        "userpasswordconfirm" : "Test-1234",
+        "alertmessage" : "O formato de email fornecido não é válido"
+    },
+
+    {
+        "testName" : "missing name",
+        "username" : "",
+        "useremail" : "z11111111@test.com",
+        "userpassword" : "Test-1234",
+        "userpasswordconfirm" : "Test-1234",
+        "alertmessage" : "Favor fornecer seu nome"
+    },
+
+    {
+        "testName" : "missing email",
+        "username" : "Zumira de Oliveira",
+        "useremail" : "",
+        "userpassword" : "Test-1234",
+        "userpasswordconfirm" : "Test-1234",
+        "alertmessage" : "Favor fornecer seu email"
+    },
+
+    {
+        "testName" : "missing password",
+        "username" : "Zumira de Oliveira",
+        "useremail" : "z11111111@test.com",
+        "userpassword" : "",
+        "userpasswordconfirm" : "Test-1234",
+        "alertmessage" : "Favor fornecer senha"
+    },
+
+    {
+        "testName" : "missing confirm password",
+        "username" : "Zumira de Oliveira",
+        "useremail" : "z11111111@test.com",
+        "userpassword" : "Test-1234",
+        "userpasswordconfirm" : "",
+        "alertmessage" : "Favor confirmar sua senha"
+    }
+]

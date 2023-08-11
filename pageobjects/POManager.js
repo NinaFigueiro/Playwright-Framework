@@ -1,8 +1,10 @@
+const {HomePage} = require('../pageobjects/HomePage.js');
+const {CreateUserPage} = require('../pageobjects/CreateUserPage.js');
 const {LoginPage} = require('../pageobjects/LoginPage.js');
-const {DashboardPage} = require('../pageobjects/DashboardPage.js');
-const {CartPage} = require('../pageobjects/CartPage.js');
-const {OrdersHistoryPage} = require('../pageobjects/OrdersHistoryPage.js');
-const {OrdersReviewPage} = require('../pageobjects/OrdersReviewPage.js');
+const {MyPage} = require('../pageobjects/MyPage.js');
+const {AllUsersPage} = require('../pageobjects/AllUsersPage.js');
+const {PendingUsersPage} = require('../pageobjects/PendingUsersPage.js');
+const {BooksPage} = require('../pageobjects/BooksPage.js');
 
 
 class POManager
@@ -10,11 +12,23 @@ class POManager
     constructor(page)
     {
         this.page = page;
+        this.homePage = new HomePage(this.page);
+        this.createUserPage = new CreateUserPage(this.page);
         this.loginPage = new LoginPage(this.page);
-        this.dashboardPage = new DashboardPage(this.page);
-        this.ordersHistoryPage = new OrdersHistoryPage(this.page);
-        this.ordersReviewPage = new OrdersReviewPage(this.page);
-        this.cartPage = new CartPage(this.page);
+        this.myPage = new MyPage(this.page);
+        this.allUsersPage = new AllUsersPage(this.page);
+        this.pendingUsersPage = new PendingUsersPage(this.page);
+        this.booksPage = new BooksPage(this.page);
+    }
+
+    getHomePage()
+    {
+        return this.homePage;
+    }
+
+    getCreateUserPage()
+    {
+        return this.createUserPage;
     }
 
     getLoginPage()
@@ -22,25 +36,25 @@ class POManager
         return this.loginPage;
     }
 
-    getCartPage()
+    getMyPage()
     {
-        return this.cartPage;
+        return this.myPage;
     }
 
-    getDashboardPage()
+    getAllUsersPage()
     {
-        return this.dashboardPage;
+        return this.allUsersPage;
     }
 
     // course content
-    getOrdersHistoryPage()
+    getPendingUsersPage()
     {
-        return this.ordersHistoryPage;
+        return this.pendingUsersPage;
     }
 
-    getOrdersReviewPage()
+    getBooksPage()
     {
-        return this.ordersReviewPage;
+        return this.booksPage;
     }
 }
 module.exports = {POManager};

@@ -1,0 +1,49 @@
+[
+    {
+        "testname" : "Create user successfuly",
+        "username" : "Zumira de Oliveira",
+        "useremail" : "zumol7772@test.com",
+        "userpassword" : "Test-1234",
+        "userpasswordconfirm" : "Test-1234",
+        "adminemail" : "ninafigueiro@tutanota.com",
+        "adminpassword" : "nina2015",
+        "alertmessage" : "Conta criada com sucesso!",
+        "cancelReservationSuccesfuly" : "Reserva deletada",
+        "bookname" : "A arte na natureza"
+    },
+
+    {
+        "testname" : "Login with pending user",
+        "useremail" : "zuzu333@email.com",
+        "userpassword" : "Test-1234",
+        "adminemail" : "zuzu333@email.com",
+        "adminpassword" : "Test-1234",
+        "alertCreateAccountSuccess" : "Conta criada com sucesso!",
+        "alertLoginFail" : "Esta conta ainda não foi aprovada",
+        "alertLoginSuccess" : "Login com sucesso!",
+        "alertApproveUserSuccess" : "Usuário aprovado!",
+        "alertBookReservatonSuccess" : "Reserva criada com sucesso!",
+        "alertReservationCanceledSuccess" : "Reserva deletada!",
+        "failDeleteUserHasReservations" : "Esse usuário ainda possui reservas de livros. Favor cancelar reservas antes de deletar"
+
+
+    },
+
+    {
+        "testname" : "Login as Admin",
+        "useremail" : "ninafigueiro@tutanota.com",
+        "userpassword" : "nina2015",
+        "alertmessage" : "Login com sucesso!"
+    },
+
+    {
+        "testname" : "Login with approved user",
+        "useremail" : "zumol7771@test.com",
+        "userpassword" : "Test-1234",
+        "alertmessage" : "Login com sucesso!"
+    }
+
+    
+
+    
+]

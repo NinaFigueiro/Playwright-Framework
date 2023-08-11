@@ -1,0 +1,21 @@
+[
+    {
+        "testname" : "Login with pending user",
+        "useremail" : "zumol6668@test.com",
+        "userpassword" : "Test-1234",
+        "alertmessage" : "Esta conta ainda não foi aprovada"
+    },
+
+    {
+        "testname" : "Login as admin",
+        "useremail" : "zumol6668@test.com",
+        "userpassword" : "Test-1234",
+        "alertmessage" : "Login com sucesso!"
+    },
+    {
+        "testname" : "Login with approved user",
+        "useremail" : "zumol6668@test.com",
+        "userpassword" : "Test-1234",
+        "alertmessage" : "Login com sucesso!"
+    }
+]

@@ -1,0 +1,12 @@
+[
+    {
+        "testname" : "Login as Admin",
+        "useremail" : "ninafigueiro@tutanota.com",
+        "userpassword" : "nina2015",
+        "alertmessage" : "Login com sucesso!"
+    }
+
+    
+
+    
+]
